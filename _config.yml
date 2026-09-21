@@ -1,0 +1,60 @@
+locale                   : "en-US"
+site_theme               : "default"
+title                    : "Dengdeng Lin"
+title_separator          : "-"
+name                     : &name "Dengdeng Lin"
+description              : &description "Dengdeng Lin's academic website"
+url                      : "https://lindeng0.github.io"
+baseurl                  : ""
+repository               : "lindeng0/lindeng0.github.io"
+
+remote_theme             : "academicpages/academicpages.github.io"
+
+author:
+  avatar           :
+  name             : "Dengdeng Lin"
+  bio              : "Ph.D. Student in Management Information Systems"
+  location         : "Hong Kong"
+  employer         : "The Chinese University of Hong Kong"
+  email            : "dengdeng.lin@link.cuhk.edu.hk"
+  github           : "lindeng0"
+
+include:
+  - _pages
+  - files
+
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+timezone: Asia/Hong_Kong
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+  - jekyll-remote-theme
