@@ -4,6 +4,8 @@ permalink: /teaching/
 author_profile: true
 ---
 
-My teaching interests include **information systems, artificial intelligence, data analytics, and economics**.
+## Teaching Experience
 
-This page will be updated with selected teaching activities, course materials, and instructional projects.
+**Teaching Assistant, The Chinese University of Hong Kong, 2025–Present**
+
+My teaching interests include **information systems, artificial intelligence, data analytics, and economics**.
