@@ -14,9 +14,6 @@ I study how different forms of AI involvement and disclosure influence people's 
 ### Generative AI in Education
 I examine how the communication style and design of generative-AI tutors can influence student motivation, engagement, learning, and perceptions of autonomy support.
 
-### Digital Innovation and Data-driven Decision Making
-I am interested in how organizations and users adopt emerging digital technologies and create value from data and AI.
-
 ## Selected Technical Projects
 
 **Image Captioning System**  
@@ -27,6 +24,3 @@ Trained and deployed YOLOv8 models for aircraft cargo-latch inspection and devel
 
 **Little Red Book Crawler App**  
 Developed a Python-based data collection application for retrieving public-facing social-media data for research purposes.
-
-**NFL Game Outcome Analysis**  
-Built and evaluated multiple predictive models using NFL Big Data Bowl and betting data to study factors associated with game outcomes.
