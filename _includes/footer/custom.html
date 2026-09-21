@@ -1,0 +1,86 @@
+<!-- start custom footer snippets -->
+
+<!-- Support for MathJax -->
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
+
+<!-- Smooth internal navigation without full-page reloads -->
+<script>
+(function () {
+  const internalPaths = new Set(["/", "/research/", "/teaching/", "/cv/"]);
+
+  function normalizePath(pathname) {
+    if (!pathname.endsWith("/")) pathname += "/";
+    return pathname;
+  }
+
+  function updateNav(pathname) {
+    const path = normalizePath(pathname);
+    document.querySelectorAll(".masthead__menu-item").forEach(function (item) {
+      item.classList.remove("selected");
+    });
+
+    const titleItem = document.querySelector(".masthead__menu-item--lg");
+    if (path === "/" && titleItem) titleItem.classList.add("selected");
+
+    document.querySelectorAll(".masthead__menu-item a").forEach(function (link) {
+      const url = new URL(link.href, window.location.origin);
+      const linkPath = normalizePath(url.pathname);
+      if (linkPath === path && !link.closest(".masthead__menu-item--lg")) {
+        link.closest(".masthead__menu-item")?.classList.add("selected");
+      }
+    });
+  }
+
+  async function navigate(url, push) {
+    try {
+      const response = await fetch(url, { credentials: "same-origin" });
+      if (!response.ok) throw new Error("Navigation request failed");
+
+      const html = await response.text();
+      const nextDoc = new DOMParser().parseFromString(html, "text/html");
+      const nextMain = nextDoc.querySelector("#main");
+      const currentMain = document.querySelector("#main");
+
+      if (!nextMain || !currentMain) {
+        window.location.href = url;
+        return;
+      }
+
+      currentMain.replaceWith(nextMain);
+      document.title = nextDoc.title;
+
+      const nextUrl = new URL(url, window.location.origin);
+      if (push) history.pushState({}, "", nextUrl.pathname + nextUrl.search + nextUrl.hash);
+
+      updateNav(nextUrl.pathname);
+      window.scrollTo({ top: 0, behavior: "instant" });
+    } catch (error) {
+      window.location.href = url;
+    }
+  }
+
+  document.addEventListener("click", function (event) {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    const link = event.target.closest("a");
+    if (!link) return;
+
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin) return;
+
+    const path = normalizePath(url.pathname);
+    if (!internalPaths.has(path)) return;
+
+    event.preventDefault();
+    navigate(url.href, true);
+  });
+
+  window.addEventListener("popstate", function () {
+    navigate(window.location.href, false);
+  });
+
+  updateNav(window.location.pathname);
+})();
+</script>
+
+<!-- end custom footer snippets -->
