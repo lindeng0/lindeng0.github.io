@@ -16,7 +16,6 @@ My research interests lie at the intersection of **information systems, artifici
 - Human–AI collaboration and AI disclosure
 - Generative AI and digital platforms
 - AI in education and personalized learning
-- Digital innovation and data-driven decision making
 
 ## Education
 
