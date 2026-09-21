@@ -24,11 +24,14 @@ My research interests lie at the intersection of **information systems, artifici
 Ph.D. Student in Management Information Systems
 
 **The Chinese University of Hong Kong**  
-M.S. in Information Science and Technology Management, 2024  
-GPA: 3.97/4.0 (First Class)
+M.S. in Information Science and Technology Management, 2024
 
 **The University of Warwick & Warwick Business School**  
 B.S. in Computer Science with Business Studies, 2023
+
+## Teaching
+
+**Teaching Assistant, The Chinese University of Hong Kong, 2025–Present**
 
 ## Contact
 
