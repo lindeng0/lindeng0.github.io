@@ -11,7 +11,7 @@ repository               : "lindeng0/lindeng0.github.io"
 remote_theme             : "academicpages/academicpages.github.io"
 
 author:
-  avatar           :
+  avatar           : "profile.jpg"
   name             : "Dengdeng Lin"
   bio              : "Ph.D. Student in Management Information Systems"
   location         : "Hong Kong"
