@@ -1,0 +1,46 @@
+---
+---
+
+/*
+ * Main Academic Pages stylesheet, with a small local override for the site title.
+ */
+
+@import
+    "vendor/breakpoint/breakpoint",
+
+    "themes",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
+    "include/mixins",
+    "vendor/susy/susy",
+
+    "layout/reset",
+    "layout/base",
+
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+
+    "layout/forms",
+
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
+    "layout/json_cv"
+;
+
+/* Keep the leftmost site title clean: no active or hover underline. */
+.masthead__menu-item--lg.selected a,
+.masthead__menu-item--lg.selected a:hover {
+  border-bottom: none;
+}
+
+.masthead__menu-item--lg a::before {
+  display: none;
+}
