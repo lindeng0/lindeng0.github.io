@@ -2,7 +2,7 @@
 ---
 
 /*
- * Main Academic Pages stylesheet, with a small local override for the site title.
+ * Main Academic Pages stylesheet with local navigation overrides.
  */
 
 @import
@@ -35,12 +35,17 @@
     "layout/json_cv"
 ;
 
-/* Keep the leftmost site title clean: no active or hover underline. */
+/* The site title ("Dengdeng Space") should never have an underline. */
+.masthead__menu-item--lg a,
+.masthead__menu-item--lg a:hover,
 .masthead__menu-item--lg.selected a,
 .masthead__menu-item--lg.selected a:hover {
-  border-bottom: none;
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
 
-.masthead__menu-item--lg a::before {
-  display: none;
+.masthead__menu-item--lg a::before,
+.masthead__menu-item--lg a:hover::before {
+  display: none !important;
+  content: none !important;
 }
