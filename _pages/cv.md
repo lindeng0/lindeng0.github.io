@@ -7,13 +7,16 @@ author_profile: true
 ## Education
 
 **The Chinese University of Hong Kong**  
-Ph.D. Student in Management Information Systems
+Ph.D. Student in Management Information Systems  
+2025–Present · Sha Tin, Hong Kong
 
 **The Chinese University of Hong Kong**  
-M.S. in Information Science and Technology Management, 2024
+M.S. in Information Science and Technology Management  
+2023–2024 · Sha Tin, Hong Kong
 
 **The University of Warwick & Warwick Business School**  
-B.S. in Computer Science with Business Studies, 2023
+B.S. in Computer Science with Business Studies  
+2020–2023 · Coventry, U.K.
 
 ## Project Experience
 
